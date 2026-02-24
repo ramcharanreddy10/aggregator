@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+httpx
+python-dotenv
+
+##pip install -r requirements.txt
+#------------------------------------------------
+## python -m uvicorn file_name:app --reload
+#   or
+## uvicorn file_name:app --reload

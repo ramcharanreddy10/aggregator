@@ -1,0 +1,29 @@
+end point = so it is a complete link to a website 
+route = it is some specific feature in a website 
+
+I've wrote Logic for only dev.to websie but almost getting data from every website works in the same way
+
+**DEV.TO**
+
+1) Start
+2) Fetch api key from .env file (*) & → return as dictionary → so that it can be given to the request library
+3) Create a function that fetch articles from the api key <>
+4) Present I have an API key with me but idk it is of which website so i am gonna provide it a URL
+5) Now URL + route  takes me to the particular function I am building rn
+6) Then I use request library to request the data from the url and api
+7) Here i use 'header' this is a keyword and if i code,get_headers(api_key)  instead of headers = get_header(api_key) then it can also assume that it is pars
+8) params: {'search': 'python'}` becomes `?search=python` in the URL. also 'url' is a positional argument so the 1 should always be url and the pars won't assume anything but the second argument by default is parms, so the get_header(api_key) can be thought as parms by the computer, Default one[get(url, params=None, headers=None)]
+9) Here the request library communicates with the provided URL & gives data in form of Response Object and I store it in response variable[Through client server architecture client-server.jpeg]
+10) if the response status_code == 200 then it is a sucessful request
+11) Then it coverts the response(**Response Object**) into json format
+12) Now if there is no data in response(json file) then it prints the print statment
+13) Now based on the json file it creates variables and put all in list compression as it is less verbose and i store it with variable name as 'table'
+14) Now with tabulate library we print(table,headers = [],tablefmt = []), here headers,tablefmt → keyword argument
+15) then write else condition under the first if response status_code == 200 that it is unable fetch the **Response Objec**t data to json format
+    
+for fetch_feed function we need to write return as it is going print out of if statment also,So we write return(as the end of the if condition)
+
+1) You Create the Tool: parser = argparse.ArgumentParser() creates the main parser object.
+2) You Define the Rules: parser.add\_argument("command", choices=\[...]) teaches the parser what commands are valid.
+3) It Auto-Generates the Help Menu: Based on your rules, the ArgumentParser builds a complete help text behind the scenes.
+4) The User Asks for Help: When a user runs python your\_script.py --help, the parser's only job is to display that pre-built help menu and then exit.
